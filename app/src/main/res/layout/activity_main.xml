@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A36641"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_xogame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7E3B21"
+        android:padding="10dp"
+        android:text="XO Game"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_player_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:hint="Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/booton_clear"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_xogame" />
+
+    <Button
+        android:id="@+id/booton_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#61291a"
+        android:text="Clear"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@id/tv_player_2"
+        app:layout_constraintStart_toEndOf="@id/tv_player_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_xogame" />
+
+    <TextView
+        android:id="@+id/et_player_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showResult"
+        android:paddingVertical="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/button_1"
+        app:layout_constraintEnd_toEndOf="@id/tv_player_1"
+        app:layout_constraintStart_toStartOf="@id/tv_player_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_player_1"
+
+        tools:text="55" />
+
+    <TextView
+        android:id="@+id/tv_player_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:hint="Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/booton_clear"
+        app:layout_constraintTop_toBottomOf="@id/tv_xogame"
+
+        />
+
+    <TextView
+        android:id="@+id/et_player_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/button_7"
+        app:layout_constraintEnd_toEndOf="@id/tv_player_2"
+        app:layout_constraintStart_toStartOf="@id/tv_player_2"
+        app:layout_constraintTop_toBottomOf="@id/tv_player_2"
+
+        tools:text="22" />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="0"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/button_2"
+        app:layout_constraintEnd_toStartOf="@id/button_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_player_1" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="1"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/button_3"
+        app:layout_constraintEnd_toStartOf="@id/button_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_1" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="2"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_2" />
+
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="3"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/button_5"
+        app:layout_constraintEnd_toStartOf="@id/button_7"
+        app:layout_constraintStart_toEndOf="@id/button_1"
+        app:layout_constraintTop_toBottomOf="@id/et_player_1" />
+
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="4"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/button_6"
+        app:layout_constraintEnd_toStartOf="@id/button_8"
+        app:layout_constraintStart_toEndOf="@id/button_2"
+        app:layout_constraintTop_toBottomOf="@id/button_1" />
+
+    <Button
+        android:id="@+id/button_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="5"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_9"
+        app:layout_constraintStart_toEndOf="@id/button_3"
+        app:layout_constraintTop_toBottomOf="@id/button_2" />
+
+
+    <Button
+        android:id="@+id/button_7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="6"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/button_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_4"
+        app:layout_constraintTop_toBottomOf="@id/et_player_1" />
+
+    <Button
+        android:id="@+id/button_8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="7"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/button_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_5"
+        app:layout_constraintTop_toBottomOf="@id/button_1" />
+
+    <Button
+        android:id="@+id/button_9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClicPlayer"
+        android:tag="8"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_6"
+        app:layout_constraintTop_toBottomOf="@id/button_2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
